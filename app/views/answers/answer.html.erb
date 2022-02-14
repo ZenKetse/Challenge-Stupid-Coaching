@@ -1,0 +1,13 @@
+<h1><%= @question %></h1>
+<p>- You</p>
+
+<% if @question == 'I am going to work' %>
+  <h2>Great!</h2>
+<% elsif @question.end_with?("?") %>
+  <h2>Silly question, get dressed and go to work!</h2>
+<% else %>
+  <h2>I don't care, get dressed and go to work!</h2>
+<% end %>
+<p>-Your Coach</p>
+
+<%= link_to 'Ask your Coach', ask_path%>
